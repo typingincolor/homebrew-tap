@@ -5,21 +5,21 @@
 class Bujo < Formula
   desc "A command-line Bullet Journal for rapid task capture and habit tracking"
   homepage "https://github.com/typingincolor/bujo"
-  version "0.14.0"
+  version "0.15.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.14.0/bujo_0.14.0_darwin_amd64.tar.gz"
-      sha256 "f736a4de0a89a46a534c2cec9d6743dbf0642368e5192a70ba16509756d3ce58"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.15.0/bujo_0.15.0_darwin_amd64.tar.gz"
+      sha256 "24108960ee01c857526de1b1218da35ad681ba2b47b7d124325d368673d575cf"
 
       def install
         bin.install "bujo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.14.0/bujo_0.14.0_darwin_arm64.tar.gz"
-      sha256 "bc0292491b878df3fc86aa01d72b6f461eec72fa961847df28d586c195995255"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.15.0/bujo_0.15.0_darwin_arm64.tar.gz"
+      sha256 "525102b350a874eaad9534c5e7d308a9231c66ba38428f93002e3307a08f4822"
 
       def install
         bin.install "bujo"
@@ -29,15 +29,15 @@ class Bujo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.14.0/bujo_0.14.0_linux_amd64.tar.gz"
-      sha256 "64a720b960fd4c65af160ec691c4eb465d158fe1a61c2785eacac3648cfe6d1a"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.15.0/bujo_0.15.0_linux_amd64.tar.gz"
+      sha256 "4f45095fa309994d03846d8c48402d9b96b563573c0d916d1f926586c009868c"
       def install
         bin.install "bujo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.14.0/bujo_0.14.0_linux_arm64.tar.gz"
-      sha256 "abb1f3df029b4920b1480c7563356285cc23999270809bd391f03b7e4f116fda"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.15.0/bujo_0.15.0_linux_arm64.tar.gz"
+      sha256 "77f2d4fea788f1d18943c942d268c1f1eeed837e886bba59ea053050ccb7239e"
       def install
         bin.install "bujo"
       end
