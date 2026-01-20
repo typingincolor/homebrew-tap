@@ -5,21 +5,21 @@
 class Bujo < Formula
   desc "A command-line Bullet Journal with AI-powered summaries"
   homepage "https://github.com/typingincolor/bujo"
-  version "2.1.0-alpha"
+  version "2.2.0-alpha"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/typingincolor/bujo/releases/download/v2.1.0-alpha/bujo_2.1.0-alpha_darwin_amd64.tar.gz"
-      sha256 "516b7f12a96192c3b340a187d818d98b6ea54b15dcf15abc629949e43dbc3a76"
+      url "https://github.com/typingincolor/bujo/releases/download/v2.2.0-alpha/bujo_2.2.0-alpha_darwin_amd64.tar.gz"
+      sha256 "0877d3ea9b151e42f3cb85822d077dffab036f74ff14ed19787c20c6d792e705"
 
       def install
         bin.install "bujo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/typingincolor/bujo/releases/download/v2.1.0-alpha/bujo_2.1.0-alpha_darwin_arm64.tar.gz"
-      sha256 "138daa97404c9b44a39b47678fa89ef8c78344208981bcdb24bc204a85fc031f"
+      url "https://github.com/typingincolor/bujo/releases/download/v2.2.0-alpha/bujo_2.2.0-alpha_darwin_arm64.tar.gz"
+      sha256 "7ab1c7a5b249bdfa58af008ff370a7566c0768696455274005a2b4d7c00f069d"
 
       def install
         bin.install "bujo"
@@ -29,15 +29,15 @@ class Bujo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typingincolor/bujo/releases/download/v2.1.0-alpha/bujo_2.1.0-alpha_linux_amd64.tar.gz"
-      sha256 "92ea36b88e5ec8d820a81ec7712551381fe9dd89c9411c232803545dc1f71727"
+      url "https://github.com/typingincolor/bujo/releases/download/v2.2.0-alpha/bujo_2.2.0-alpha_linux_amd64.tar.gz"
+      sha256 "9383072e0ff49b0c253ff2d75fe57de815af99650340744324814562358d6932"
       def install
         bin.install "bujo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typingincolor/bujo/releases/download/v2.1.0-alpha/bujo_2.1.0-alpha_linux_arm64.tar.gz"
-      sha256 "83d37c0688af6eaa50d49737fcbd6c149acad4fbcdc114efd3c61778c44b7a1b"
+      url "https://github.com/typingincolor/bujo/releases/download/v2.2.0-alpha/bujo_2.2.0-alpha_linux_arm64.tar.gz"
+      sha256 "0912f2ef6abcb277c18c7657185dbc9f9a092c8f50dd0502e765c79023fb7106"
       def install
         bin.install "bujo"
       end
