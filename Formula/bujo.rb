@@ -5,21 +5,21 @@
 class Bujo < Formula
   desc "A command-line Bullet Journal with AI-powered summaries"
   homepage "https://github.com/typingincolor/bujo"
-  version "0.0.0-nightly.8"
+  version "0.0.0-nightly.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.8/bujo_0.0.0-nightly.8_darwin_amd64.tar.gz"
-      sha256 "6e3f32dbac0e897a77aa8caf54f609d26dfda2bac9a65bb2c97af1d8dabb37b9"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.9/bujo_0.0.0-nightly.9_darwin_amd64.tar.gz"
+      sha256 "e9d4d87192699ed8d9279b45f14e9aee1af184f23ee549c4a2f9e750bf6249ca"
 
       def install
         bin.install "bujo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.8/bujo_0.0.0-nightly.8_darwin_arm64.tar.gz"
-      sha256 "077e8668662ea18cabc62377f6e4aeb35aee39bc33bc1b3f42a4d1ef9a8f3a28"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.9/bujo_0.0.0-nightly.9_darwin_arm64.tar.gz"
+      sha256 "a81c04002ccd9c8297325bb68e1a8854e2259bf558ac7813ce83a05a26776b32"
 
       def install
         bin.install "bujo"
@@ -29,15 +29,15 @@ class Bujo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.8/bujo_0.0.0-nightly.8_linux_amd64.tar.gz"
-      sha256 "644b0bbdb00e56c65c2edc56babea83a517005b22a7e81508623ab92caf7cbf1"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.9/bujo_0.0.0-nightly.9_linux_amd64.tar.gz"
+      sha256 "094f7af10dccea7368ee4f87e0ebd3f047b65ba49675edcee9f4f313aee51066"
       def install
         bin.install "bujo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.8/bujo_0.0.0-nightly.8_linux_arm64.tar.gz"
-      sha256 "6d2e81cf39fb9413837ebcb5d7858510d761438e3820b4f570671fb0c09a4784"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.9/bujo_0.0.0-nightly.9_linux_arm64.tar.gz"
+      sha256 "20ba91e9d60c70afdb32b56409864f1d80d59c03c1eccb5aacb2f7f76e113696"
       def install
         bin.install "bujo"
       end
