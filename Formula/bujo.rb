@@ -5,13 +5,13 @@
 class Bujo < Formula
   desc "A command-line Bullet Journal with AI-powered summaries"
   homepage "https://github.com/typingincolor/bujo"
-  version "0.0.0-nightly.27"
+  version "0.0.0-nightly.28"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.27/bujo_0.0.0-nightly.27_darwin_amd64.tar.gz"
-      sha256 "228ccf3947bf1d6102374ee5867f0fb69a3be27c7d0af3176e007b770f2b42bd"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.28/bujo_0.0.0-nightly.28_darwin_amd64.tar.gz"
+      sha256 "381e2e57bf98e942375bfa0d342f55021e4daa22307e4eab40a5ab0632cd5b21"
 
       define_method(:install) do
         bin.install "bujo"
@@ -20,8 +20,8 @@ class Bujo < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.27/bujo_0.0.0-nightly.27_darwin_arm64.tar.gz"
-      sha256 "5a2dcf3d2171d922dccec140e1a27aa60101fc17d9080ad7a1ac41dc786daff6"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.28/bujo_0.0.0-nightly.28_darwin_arm64.tar.gz"
+      sha256 "5ea8285b2aecfce47ede13300d3833cf196bbe0cab1a837a277b2bb520289734"
 
       define_method(:install) do
         bin.install "bujo"
@@ -33,8 +33,8 @@ class Bujo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.27/bujo_0.0.0-nightly.27_linux_amd64.tar.gz"
-      sha256 "3083356f6eb65ac5e27798f8bc3b1acb5a0a1b26688a9bf74c56b5c831aad7c2"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.28/bujo_0.0.0-nightly.28_linux_amd64.tar.gz"
+      sha256 "9df3178faa3203b903a84458f192076606e07fb03a7b634e1758f1c077ec1151"
       define_method(:install) do
         bin.install "bujo"
         bin.install "remarkable-ocr" if File.exist?("remarkable-ocr")
@@ -42,8 +42,8 @@ class Bujo < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.27/bujo_0.0.0-nightly.27_linux_arm64.tar.gz"
-      sha256 "34b3252539c468e878b5d9575a210de122a7807711d69ac538003b008560851f"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.28/bujo_0.0.0-nightly.28_linux_arm64.tar.gz"
+      sha256 "1e21b7fc2a83f7bf1a32f266bc039fbac9e3f0c763bd420484be70756c93e5dc"
       define_method(:install) do
         bin.install "bujo"
         bin.install "remarkable-ocr" if File.exist?("remarkable-ocr")
