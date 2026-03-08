@@ -5,51 +5,51 @@
 class Bujo < Formula
   desc "A command-line Bullet Journal with AI-powered summaries"
   homepage "https://github.com/typingincolor/bujo"
-  version "0.0.0-nightly.26"
+  version "0.0.0-nightly.27"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.26/bujo_0.0.0-nightly.26_darwin_amd64.tar.gz"
-      sha256 "d9b2c75852d1e72aac462d4c130f26bc1ffddcee07e6ec7c715922c02e4117de"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.27/bujo_0.0.0-nightly.27_darwin_amd64.tar.gz"
+      sha256 "228ccf3947bf1d6102374ee5867f0fb69a3be27c7d0af3176e007b770f2b42bd"
 
       define_method(:install) do
         bin.install "bujo"
-        bin.install "remarkable-ocr" if File.exist? "remarkable-ocr"
+        bin.install "remarkable-ocr" if File.exist?("remarkable-ocr")
+        generate_completions_from_executable(bin/"bujo", "completion")
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.26/bujo_0.0.0-nightly.26_darwin_arm64.tar.gz"
-      sha256 "2827c9c44ea5b644ea8beb8b62f586469dc97f4747a7903e0e15489d6d6b6ca9"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.27/bujo_0.0.0-nightly.27_darwin_arm64.tar.gz"
+      sha256 "5a2dcf3d2171d922dccec140e1a27aa60101fc17d9080ad7a1ac41dc786daff6"
 
       define_method(:install) do
         bin.install "bujo"
-        bin.install "remarkable-ocr" if File.exist? "remarkable-ocr"
+        bin.install "remarkable-ocr" if File.exist?("remarkable-ocr")
+        generate_completions_from_executable(bin/"bujo", "completion")
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.26/bujo_0.0.0-nightly.26_linux_amd64.tar.gz"
-      sha256 "ded67da18483a3a7405334eea3c0eaf60b9d17440deb1009e059c4418b6472de"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.27/bujo_0.0.0-nightly.27_linux_amd64.tar.gz"
+      sha256 "3083356f6eb65ac5e27798f8bc3b1acb5a0a1b26688a9bf74c56b5c831aad7c2"
       define_method(:install) do
         bin.install "bujo"
-        bin.install "remarkable-ocr" if File.exist? "remarkable-ocr"
+        bin.install "remarkable-ocr" if File.exist?("remarkable-ocr")
+        generate_completions_from_executable(bin/"bujo", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.26/bujo_0.0.0-nightly.26_linux_arm64.tar.gz"
-      sha256 "87d42e0a7714a43d0e05ca3ab591f660734763cfd5655f14a4692c91e93b433e"
+      url "https://github.com/typingincolor/bujo/releases/download/v0.0.0-nightly.27/bujo_0.0.0-nightly.27_linux_arm64.tar.gz"
+      sha256 "34b3252539c468e878b5d9575a210de122a7807711d69ac538003b008560851f"
       define_method(:install) do
         bin.install "bujo"
-        bin.install "remarkable-ocr" if File.exist? "remarkable-ocr"
+        bin.install "remarkable-ocr" if File.exist?("remarkable-ocr")
+        generate_completions_from_executable(bin/"bujo", "completion")
       end
     end
-  end
-
-  def post_install
-    (zsh_completion/"_bujo").write `#{bin}/bujo completion zsh`
   end
 
   def caveats
