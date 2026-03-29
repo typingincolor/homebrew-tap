@@ -1,6 +1,6 @@
 cask "bujo-desktop" do
-  version "0.0.0-nightly.31"
-  sha256 "bd997bebba1dfb67399aaf1f5b5c6aa497e6d1ab13d98bb873236182bbeb9242"
+  version "0.0.0-nightly.33"
+  sha256 "fb7cf20ab76fb7e74b8ec9a8a12beaf6fab50c7bcb7436748bce33359467c741"
 
   url "https://github.com/typingincolor/bujo/releases/download/v#{version}/bujo-desktop-v#{version}-darwin-universal.zip"
   name "Bujo Desktop"
